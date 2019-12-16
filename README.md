@@ -1,4 +1,4 @@
-# Arduino Oversampling and Decimation
+# Arduino Oversampling and Decimation Library
 
 Arduino Oversampling, Decimation And Averaging Library.
 Using oversampling and decimation will only lower the ADCs quantization error, it does not
