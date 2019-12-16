@@ -1,6 +1,6 @@
-# Arduino-Oversampling
+# Arduino Oversampling and Decimation
 
-Arduino Oversampling And Averaging Library
+Arduino Oversampling, Decimation And Averaging Library
 
 Exaple Sketch:
 
