@@ -20,16 +20,18 @@ Oversampling::Oversampling(int adcbytes, int samplebytes, int Averaging)
 int Oversampling::read(int pin)
 {
   int SampleCount = _samplebytes - _adcbytes;
-  SampleCount = constrain(SampleCount, 1, 14) ** 4;
+  SampleCount = constrain(SampleCount, 1, 14);
+  int OversampleCount = pow(SampleCount, 4); // int OversampleCount = SampleCount ** 4;
+  int DecimationCount = pow(SampleCount, 2); // int DecimationCount = SampleCount ** 2;
   
-  //unsigned long avarage = 0;
+  // Can Lead To Overflow
   unsigned long TotalADC = 0;
   for (int i=0; i<_Averaging; i++){
-    for (int i=0; i<SampleCount; i++){
+    for (int i=0; i<OversampleCount; i++){
       TotalADC = TotalADC + analogRead(pin);
     }
   }
-  TotalADC = TotalADC / 2 / _Averaging;
+  TotalADC = TotalADC / DecimationCount / _Averaging;
 
   avarage = avarage / _Averaging;
   //_Averaging
