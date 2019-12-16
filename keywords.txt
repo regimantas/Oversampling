@@ -1,3 +1,2 @@
 Oversampling	KEYWORD1
-dash	KEYWORD2
-dot	KEYWORD2
+read	KEYWORD2
