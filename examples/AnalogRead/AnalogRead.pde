@@ -9,7 +9,7 @@ void setup()
 
 void loop()
 {
-  Serial.print(adc.read(0));
+  Serial.print(adc.read(0)); // 0 is adc pin
   delay(1000);
 }
 
