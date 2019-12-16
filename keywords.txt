@@ -1,0 +1,3 @@
+Oversampling	KEYWORD1
+dash	KEYWORD2
+dot	KEYWORD2
