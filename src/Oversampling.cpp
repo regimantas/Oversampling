@@ -1,6 +1,6 @@
 /*
-  Morse.cpp - Library for flashing Morse code.
-  Created by David A. Mellis, November 2, 2007.
+  Oversampling - Arduino Oversampling And Decimation Library.
+  Created by Regimantas Baublys, 2019.
   Released into the public domain.
 */
 
