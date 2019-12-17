@@ -23,6 +23,9 @@ int Oversampling::read(int pin)
   SampleCount = constrain(SampleCount, 1, 14);
   int OversampleCount = pow(SampleCount, 4); // int OversampleCount = SampleCount ** 4;
   int DecimationCount = pow(SampleCount, 2); // int DecimationCount = SampleCount ** 2;
+  if (SampleCount==3){
+    OversampleCount = 64;
+  }
   
   // Can Lead To Overflow
   unsigned long TotalADC = 0;
