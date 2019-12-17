@@ -25,6 +25,7 @@ int Oversampling::read(int pin)
   int DecimationCount = pow(SampleCount, 2); // int DecimationCount = SampleCount ** 2;
   if (SampleCount==3){
     OversampleCount = 64;
+    DecimationCount = 8;
   }
   
   // Can Lead To Overflow
