@@ -23,6 +23,14 @@ int Oversampling::read(int pin)
   SampleCount = constrain(SampleCount, 1, 14);
   int OversampleCount = pow(SampleCount, 4); // int OversampleCount = SampleCount ** 4;
   int DecimationCount = pow(SampleCount, 2); // int DecimationCount = SampleCount ** 2;
+  if (SampleCount==1){
+    OversampleCount = 4;
+    DecimationCount = 2;
+  }
+  if (SampleCount==2){
+    OversampleCount = 16;
+    DecimationCount = 4;
+  }
   if (SampleCount==3){
     OversampleCount = 64;
     DecimationCount = 8;
@@ -37,7 +45,6 @@ int Oversampling::read(int pin)
   }
   TotalADC = TotalADC / DecimationCount / _Averaging;
 
-  avarage = avarage / _Averaging;
   //_Averaging
-  return avarage;
+  return TotalADC;
 }
