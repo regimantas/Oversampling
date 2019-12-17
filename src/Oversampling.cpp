@@ -35,6 +35,18 @@ int Oversampling::read(int pin)
     OversampleCount = 64;
     DecimationCount = 8;
   }
+  if (SampleCount==4){
+    OversampleCount = 256;
+    DecimationCount = 16;
+  }
+  if (SampleCount==5){
+    OversampleCount = 1024;
+    DecimationCount = 32;
+  }
+  if (SampleCount==6){
+    OversampleCount = 4096;
+    DecimationCount = 64;
+  }
   
   // Can Lead To Overflow
   unsigned long TotalADC = 0;
