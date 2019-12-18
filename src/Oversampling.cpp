@@ -20,7 +20,7 @@ Oversampling::Oversampling(int adcbytes, int samplebytes, int Averaging)
 int Oversampling::read(int pin)
 {
   int SampleCount = _samplebytes - _adcbytes;
-  SampleCount = constrain(SampleCount, 1, 14);
+  SampleCount = constrain(SampleCount, 1, 8);
   int OversampleCount;// = pow(SampleCount, 4);
   int DecimationCount;// = pow(SampleCount, 2);
   if (SampleCount==1){
