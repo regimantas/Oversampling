@@ -21,8 +21,8 @@ int Oversampling::read(int pin)
 {
   int SampleCount = _samplebytes - _adcbytes;
   SampleCount = constrain(SampleCount, 1, 14);
-  int OversampleCount = pow(SampleCount, 4); // int OversampleCount = SampleCount ** 4;
-  int DecimationCount = pow(SampleCount, 2); // int DecimationCount = SampleCount ** 2;
+  int OversampleCount;// = pow(SampleCount, 4);
+  int DecimationCount;// = pow(SampleCount, 2);
   if (SampleCount==1){
     OversampleCount = 4;
     DecimationCount = 2;
@@ -46,6 +46,14 @@ int Oversampling::read(int pin)
   if (SampleCount==6){
     OversampleCount = 4096;
     DecimationCount = 64;
+  }
+  if (SampleCount==7){
+    OversampleCount = 16384;
+    DecimationCount = 128;
+  }
+  if (SampleCount==8){
+    OversampleCount = 65536;
+    DecimationCount = 256;
   }
   
   // Can Lead To Overflow

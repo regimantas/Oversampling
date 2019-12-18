@@ -1,6 +1,6 @@
 #include <Oversampling.h>
 
-Oversampling adc(10, 12, 2); //Adc Bytes 10 or 12, Oversampeling Bytes 11-24, 2 Is avaraging count.
+Oversampling adc(10, 12, 2); //Adc Bytes 10 or 12, Oversampeling Bytes 11-18, 2 Is avaraging count.
 
 void setup()
 {
