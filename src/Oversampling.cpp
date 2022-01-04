@@ -17,7 +17,7 @@ Oversampling::Oversampling(int adcbytes, int samplebytes, int Averaging)
   _Averaging = Averaging;
 }
 
-int Oversampling::read(int pin)
+unsigned long Oversampling::read(int pin)
 {
   int SampleCount = _samplebytes - _adcbytes;
   SampleCount = constrain(SampleCount, 1, 8);
