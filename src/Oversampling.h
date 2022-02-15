@@ -13,7 +13,7 @@ class Oversampling
 {
   public:
     Oversampling(int adcbytes, int samplebytes, int Averaging);
-    int read(int pin);
+    unsigned long read(int pin);
   private:
     int _samplebytes;
     int _adcbytes;
