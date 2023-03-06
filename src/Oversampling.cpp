@@ -25,8 +25,8 @@ unsigned long Oversampling::read(int pin)
   
   // Can Lead To Overflow
   unsigned long TotalADC = 0;
-  for (int i=0; i<_Averaging; i++){
-    for (long i=0; i<OversampleCount; i++){
+  for (unsigned long i=0; i<_Averaging; i++){
+    for (unsigned long i=0; i<OversampleCount; i++){
       TotalADC = TotalADC + analogRead(pin);
     }
   }
