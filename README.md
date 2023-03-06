@@ -35,7 +35,7 @@ void setup()
 
 void loop()
 {
-  Serial.print( (int) adc.read(0) ); // 0 is adc pin
+  Serial.print( (long) adc.read(0) ); // 0 is adc pin
   delay(1000);
 }
 ```
