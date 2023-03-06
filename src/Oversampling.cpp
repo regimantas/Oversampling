@@ -9,8 +9,8 @@
 
 Oversampling::Oversampling(int adcbytes, int samplebytes, int Averaging)
 {
-  _samplebytes = constrain(samplebytes, 11, 18);
-  _adcbytes = constrain(adcbytes, 10, 12);
+  _samplebytes = constrain(samplebytes, 11, 24);
+  _adcbytes = constrain(adcbytes, 8, 16);
   if (Averaging < 1){
     Averaging = 1;
   }
