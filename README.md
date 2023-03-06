@@ -12,7 +12,7 @@ unsigned long adc_value = adc.read(Pin); // Oversampling and decimation
 
 Where:
 
-- `Adc` is the resolution of the ADC of the microcontroller; can be 10 or 12,
+- `Adc` is the resolution of the ADC of the microcontroller; can be from 8 to 16,
 - `Oversampling` is the number of bits obtained through the oversampling process; can be 11 to 24,
 - `Averaging` is the number of consecutive oversampled readings performed inside `adc.read()` before returning the averaged value.
 - `Pin` is the ADC pin number (e.g., `analogRead(Pin)`).
